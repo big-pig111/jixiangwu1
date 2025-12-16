@@ -30,8 +30,9 @@
     var commentTitle = "“马麒麒”迎新春！2026年总台春晚吉祥物正式亮相"; //评论标题
     /* 评论对象ID 20位以内的字符串 每个被评论对象不同20120420------ */
     var itemid1="ARTIpVAqhEc4VDh1iAplrNKn251206";//正文页id，赋值给留言评论模块的参数之一
-    // 使用固定URL格式，基于域名和文章ID
-    var commentUrl = "https://1118cctv.info/2025/12/16/ARTIpVAqhEc4VDh1iAplrNKn251206.shtml?utm_source=chatgpt.com";
+    // 动态获取当前页面URL并添加utm参数（适用于Vercel部署）
+    var currentUrl = window.location.origin + window.location.pathname;
+    var commentUrl = currentUrl + (window.location.search ? '&' : '?') + 'utm_source=chatgpt.com';
     var column_id = "TOPC1437556372226409";
     var sub_column_id = "PAGE1437633643280863"; 
     var domainname = domainame_;
